@@ -6,11 +6,11 @@ import {
   Route,
 } from "react-router-dom";
 import "./index.css";
-import Login from "./pages/Login";
+import Homepage from "./pages/Homepage/Homepage";
 
 const router = createBrowserRouter([
   {
-    path: "/",element: <Login />,
+    path: "/",element: <Homepage />,
   },
 ]);
 

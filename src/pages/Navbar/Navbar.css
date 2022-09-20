@@ -1,0 +1,24 @@
+.nav {
+	height: 4rem;
+	justify-content: space-between;
+}
+button {
+	height: 4rem;
+	width: 6rem;
+	border-left: 1px solid #f5f7f6;
+	border-right: 1px solid #f5f7f6;
+	border-top: none;
+	border-bottom: none;
+	background-color: white;
+	font-weight: 300;
+}
+button:hover {
+	color: #427ad9;
+	background-color: #f5f7f6;
+}
+input {
+	background-color: #f5f7f6 !important;
+	height: 4rem;
+	box-shadow: none !important;
+	border: none !important;
+}
