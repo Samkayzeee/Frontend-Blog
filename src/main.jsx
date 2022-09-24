@@ -6,11 +6,17 @@ import {
   Route,
 } from "react-router-dom";
 import "./index.css";
-import Login from "./pages/Login";
+import Login from "./pages/Confirmation/Login";
+
+
+
 
 const router = createBrowserRouter([
   {
-    path: "/",element: <Login />,
+    path: "/", element: <Login/>,
+    
+    
+  
   },
 ]);
 
