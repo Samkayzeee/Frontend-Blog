@@ -3,6 +3,7 @@ import React from 'react'
 import image from '../../assets/blog4.jpg'
 
 import { Link } from 'react-router-dom'
+import Login from './Login'
 
 const Signup = () => {
   return (
@@ -15,35 +16,36 @@ const Signup = () => {
           <h3 className='reg'>Registration Form</h3>
           <div className='divsign container'>
             <h5>SIGN UP</h5>
-            <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+        <form action="">
+<div class="form-floating mb-3">
+  <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com"/>
   <label for="floatingInput">Full Name</label>
 </div>
+
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+  <input type="email" class="form-control" id="floatingPassword" placeholder="Password"/>
   <label for="floatingPassword">Email Address</label>
-            </div>
-            <div class="form-floating  mt-3 ">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-  <label for="floatingInput">Password</label>
-            </div>
-             <div class="form-floating  mt-3 ">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"/>
-  <label for="floatingInput">Confirm Password</label>
-            </div>
-            <div className='div-register'>
-              <button className='register shadow' >Register</button>
-            </div>
+</div>
+
+<div class="form-floating  mt-3 ">
+  <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  <label for="floatingInput">Create Username</label>
+</div>
+
+<div class="form-floating  mt-3 ">
+  <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com"/>
+  <label for="floatingInput">Create Password</label>
+</div>
+
+<div className='div-register'>
+  <button className='register shadow' >Register</button>
+</div>
+</form>
 
             <div>
-              <h6>You already have an account?<span>Login here</span></h6>
-             
-             
+              <h6 className='already'>You already have an account? <Link to={'/'}>Login</Link></h6>
             </div>
-
-            
-
-         
+  
           </div>
         </div>
      </div>
@@ -52,4 +54,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Signup;
