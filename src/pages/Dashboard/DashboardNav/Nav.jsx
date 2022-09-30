@@ -1,8 +1,8 @@
-import "./Navbar.css";
-const Navbar = () => {
+import "./Nav.css";
+const Nav = ({children}) => {
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg bg-light">
+			<nav className="navbar navbar-expand-lg bg-light ">
 				<div className="container-fluid">
 					<a className="navbar-brand" href="#">
 						BONA
@@ -35,6 +35,11 @@ const Navbar = () => {
 									Features
 								</a>
 							</li>
+							<li className="nav-item ms-4">
+								<a className="nav-link" href="#">
+									Account
+								</a>
+							</li>
 						</ul>
 						<form className="d-flex w-50" role="search">
 							<input
@@ -50,20 +55,10 @@ const Navbar = () => {
 					</div>
 				</div>
 			</nav>
-			{/* <nav className="nav d-flex w-100 align-items-center shadow-sm">
-            <div className='w-50'>
-            <button>Bona</button>
-            <button>Home</button>
-            <button>Categories</button>
-            <button>Features</button>
-            </div>
-            
-            <div className='w-50'>
-               <input type="search" placeholder='Type of search' className='form-control w-100 rounded-0'/>
-            </div>
-        </nav> */}
+			
+        <div>{children}</div>
 		</>
 	);
 };
 
-export default Navbar;
+export default Nav;
