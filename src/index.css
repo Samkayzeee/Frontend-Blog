@@ -8,9 +8,12 @@
  align-items: center;
 
 }
+.divs-contain{
+ margin-top: 13px;
+}
 .submain{
   width: 60%;
-  height:85vh;
+  height:92vh;
   margin: auto;
   border-radius: 7px;
   
@@ -23,16 +26,18 @@
   background-size: contain;
  
 }
+.sign{
+  margin-top: -20px;
+}
+
 .div2{
   width: 50%;
+  
   height: 80vh ;
   background-color: #f5f7f6;
  
 }
-.divsign {
 
-margin-top: 70px;
-}
 
 .register{
   width: 80%;
@@ -43,13 +48,16 @@ margin-top: 70px;
   border: none;
  
 }
+.error-p{
+  color: red;
+}
 .div-register{
  display: flex;
  justify-content: center;
  padding: 15px;
 }
 .register:hover {
-          background-color: red;
+          background-color: darkblue;
           color: white;
           transform: scaleX(120%);
      }

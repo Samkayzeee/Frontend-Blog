@@ -1,12 +1,14 @@
 import React from 'react'
 import image from '../../assets/blog4.jpg'
-import Signup from '../Confirmation/Signup'
+import { Link } from 'react-router-dom'
+
 
 
 
 const Login = () => {
   return (
-    <div className='divmain'>
+      <form>
+          <div className='divmain'>
       <div className='submain shadow'>
         <div className='div1'style={{backgroundImage: `url(${image})`}} >
         
@@ -27,7 +29,8 @@ const Login = () => {
              
             <div className='div-register'>
               <button className='register shadow' >SIGN IN</button>
-            </div>
+                          </div>
+                          <Link to={"/upload"}>SIgn</Link>
 
             
 
@@ -39,7 +42,9 @@ const Login = () => {
      </div>
     
     </div>
+    </form>
   )
 }
 
-export default Login
+
+export default Login;
