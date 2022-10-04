@@ -1,14 +1,15 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 const Navbar = () => {
 	return (
 		<>
-			<nav class="navbar navbar-expand-lg bg-light">
-				<div class="container-fluid">
-					<a class="navbar-brand" href="#">
-						BONA
+			<nav className="navbar navbar-expand-lg bg-light p-2 me-2">
+				<div className="container-fluid">
+					<a className="navbar-brand" href="#">
+						CRITIQUE
 					</a>
 					<button
-						class="navbar-toggler"
+						className="navbar-toggler"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#navbarSupportedContent"
@@ -16,29 +17,29 @@ const Navbar = () => {
 						aria-expanded="false"
 						aria-label="Toggle navigation"
 					>
-						<span class="navbar-toggler-icon"></span>
+						<span className="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">
+					<div className="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul className="navbar-nav ms-4 me-auto mb-2 mb-lg-0">
+							<li className="nav-item">
+								<a className="nav-link active" aria-current="page" href="#">
 									Home
 								</a>
 							</li>
-							<li class="nav-item ms-4">
-								<a class="nav-link" href="#">
+							<li className="nav-item ms-4">
+								<a className="nav-link" href="#">
 									Categories
 								</a>
 							</li>
-							<li class="nav-item ms-4">
-								<a class="nav-link" href="#">
+							<li className="nav-item ms-4">
+								<a className="nav-link" href="#">
 									Features
 								</a>
 							</li>
 						</ul>
-						<form class="d-flex w-50" role="search">
+						<form className="d-flex" role="search">
 							<input
-								class="form-control me-2"
+								className="form-control me-2 input"
 								type="search"
 								placeholder="Type of search"
 								aria-label="Search"
@@ -47,6 +48,12 @@ const Navbar = () => {
 								Search
 							</button> */}
 						</form>
+						<Link>
+							<button className='btn btn-success'>Log In</button>
+						</Link>
+						<Link to='/profile'>
+							<button className='btn btn-primary ms-2'>Sign Up</button>
+						</Link>
 					</div>
 				</div>
 			</nav>
@@ -59,7 +66,7 @@ const Navbar = () => {
             </div>
             
             <div className='w-50'>
-               <input type="search" placeholder='Type of search' className='form-control w-100 rounded-0'/>
+            	<input type="search" placeholder='Type of search' className='form-control w-100 rounded-0'/>
             </div>
         </nav> */}
 		</>

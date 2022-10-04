@@ -1,7 +1,7 @@
-/* .nav {
-	height: 2rem !important;
-	justify-content: space-between;
-} */
+nav {
+	margin:0 1.5rem;
+	border-bottom:1px solid lightgrey;
+}
 /* button {
 	height: 2rem;
 	width: rem;
@@ -16,9 +16,22 @@ button:hover {
 	color: #427ad9;
 	background-color: #f5f7f6;
 } */
+form{
+	width:25rem;
+}
 input {
 	background-color: #f5f7f6 !important;
-	height: 4rem;
+	height: 3rem;
 	box-shadow: none !important;
-	border: none !important;
+	border: 1px solid lightgrey;
+}
+.input:hover{
+	border:1px solid lightgrey!important;
+	outline:0px;
+	box-shadow:0 0 5px lightgrey!important;
+}
+.input:focus{
+	border:1px solid lightgrey!important;
+	outline:0px;
+	box-shadow:0 0 5px lightgrey!important;
 }
