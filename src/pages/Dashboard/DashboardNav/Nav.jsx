@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import "./Nav.css";
 const Nav = ({children}) => {
 	return (
 		<>
 			<nav className="navbar navbar-expand-lg bg-light ">
 				<div className="container-fluid">
-					<a className="navbar-brand" href="#">
+					<Link to={"/"} className="navbar-brand" href="#">
 						BONA
-					</a>
+					</Link>
 					<button
 						className="navbar-toggler"
 						type="button"

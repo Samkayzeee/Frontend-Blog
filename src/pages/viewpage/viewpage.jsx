@@ -37,7 +37,9 @@ function View() {
         }
     }, [])
 
-
+    const reload = ()=>{
+		window.location.reload()
+	}
 
 
     return (
@@ -53,6 +55,7 @@ function View() {
                         </div>
                     </div>
 
+                    
                     <div className="News">
                         {determiner && news.length <= 0 &&
                             <div className="my-5" style={{ display: "flex", justifyContent: "center" }}>
@@ -73,13 +76,17 @@ function View() {
                                         </div>
                                     </div>
                                     <div className="px-5 mx-4">
-                                        <header className="position-relative px-4  py-4 mt-5">
-                                            <div className="circle shadow rounded-circle  translate-middle  position-absolute top-0 ">
+                                        <header className=" py-4  d-flex  gap-3 " style={{alignItems:"center"}}>
+                                            <div className="circle shadow rounded-circle   ">
                                                <img src={profile} className="w-75 h-75 rounded-circle " alt="" />
+                                            </div>
+                                            <div>
+                                                <div className="fs-5">Mubarokah@preete</div>
+                                                <div className="text-secondary">october 4, 2022.</div>
                                             </div>
                                         </header>
                                         <div>
-                                            <h1 className="py-3">{value.title}</h1>
+                                            <h1 className="py-3 fw-bold">{value.title}</h1>
                                             <p className="content">{value.content}</p>
                                         </div>
                                     </div>
@@ -87,12 +94,12 @@ function View() {
                             )
                         }
                         {!determiner && news.length <= 0 &&
-                            <div className="my-5" style={{ display: "flex", justifyContent: "center" }}>
-                                <span className="spinner-grow"></span>
-                                <span className="spinner-grow"></span>
-                                <span className="spinner-grow"></span>
-                                Loading...
-                            </div>
+                             <div className="my-5" style={{display:"flex", justifyContent:"center", flexDirection:"column"}}>
+                             <div className="w-75 text-center mx-auto fs-5">Failed to load this page, check your internet connection and try again </div>
+                             <form  className="w-50 mx-auto text-center py-4">
+                                 <button className="btn btn-outline-dark px-3 rounded-3" onClick={reload}>Click to reload this page</button>
+                             </form>
+                         </div>
                         }
 
 

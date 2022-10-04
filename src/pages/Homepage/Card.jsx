@@ -14,9 +14,7 @@ const Card = (props) => {
 					<div className="modal-content">
 						<div className="modal-header">
 							<h5 className="modal-title fw-bold" id="staticBackdropLabel">Login to continue</h5>
-							<button type="button" className=" btn btn-close" data-dismiss="modal" >
 
-							</button>
 						</div>
 						<div className="modal-body text-start">
 							<div className="text-dark hint"> We are place where you locate interesting articles and breaking news  </div>
@@ -34,11 +32,24 @@ const Card = (props) => {
 
 		)
 	}, [])
+	
+	const reload = ()=>{
+		window.location.reload()
+	}
 
 
 	return (
 		<div className="containerr py-5 w-100 justify-content-center gap-5 d-flex flex-wrap">
-			{props.item.map((value, index) => (
+			{props.determ && props.item.length <= 0 &&
+				<div className="my-5" style={{ display: "flex", justifyContent: "center" }}>
+					<span className="spinner-grow"></span>
+					<span className="spinner-grow"></span>
+					<span className="spinner-grow"></span>
+					Loading...
+				</div>
+			}
+
+			{!props.determ && props.item.length > 0 && props.item.map((value, index) => (
 				<div
 					className="cardd card position-relative rounded-0 mt-5 h-25"
 					style={{ width: 23 + "rem" }}
@@ -85,6 +96,14 @@ const Card = (props) => {
 					</div>
 				</div>
 			))}
+			{ !props.determ && props.item.length <= 0 && 
+                            <div className="my-5" style={{display:"flex", justifyContent:"center", flexDirection:"column"}}>
+                                <div className="w-100 mx-auto fs-5">Failed to load this page, check your internet connection and try again </div>
+								<form  className="w-50 mx-auto py-4">
+									<button className="btn btn-outline-dark px-3 rounded-3" onClick={reload}>Click to reload this page</button>
+								</form>
+                            </div>
+                        }
 		</div>
 	);
 };

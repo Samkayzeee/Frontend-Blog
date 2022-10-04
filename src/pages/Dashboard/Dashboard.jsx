@@ -33,9 +33,9 @@ function Dashboard() {
 		}
 	}, [])
 
-	// const navigateTo = (title)=>{
-	//     navigate(`/view/${title}`)
-	// }
+	const reload = ()=>{
+		window.location.reload()
+	}
 
 
 
@@ -102,11 +102,11 @@ function Dashboard() {
 							</div>
 						))}
 						 { !determiner && news.length <= 0 && 
-                            <div className="my-5" style={{display:"flex", justifyContent:"center"}}>
-                                <span className="spinner-grow"></span>
-                                <span className="spinner-grow"></span>
-                                <span className="spinner-grow"></span>
-                                Loading...
+                            <div className="my-5" style={{display:"flex", justifyContent:"center", flexDirection:"column"}}>
+                                <div className="w-100 mx-auto fs-5">Failed to load this page, check your internet connection and try again </div>
+								<form  className="w-50 mx-auto py-4">
+									<button className="btn btn-outline-dark px-3 rounded-3" onClick={reload}>Click to reload this page</button>
+								</form>
                             </div>
                         }
 
