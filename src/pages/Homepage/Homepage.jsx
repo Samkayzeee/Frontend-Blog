@@ -4,18 +4,21 @@ import Navbar from "../Navbar/Navbar";
 import './Homepage.css'
 import Card from "./Card";
 import Footer from "./Footer";
+// import Navbar_2 from "../Navbar/Navbar_2";
 const Homepage = () => {
     const [news, setNews] = useState([])
     const [determiner, setDeterminer] = useState(true)
 
     useEffect(() => {
-       async function fetchNews() {
+        async function fetchNews() {
             try {
+
                 setDeterminer(true)
             const response = axios.get('https://newsapi.org/v2/top-headlines?country=gb&apiKey=db429db159364e45bb381fa554b743e9')
             const result = await response
                 console.log(result.data.articles);
                 setNews(result.data.articles)        
+
             } catch (error) {
                 console.log(error);
             }finally{
@@ -23,6 +26,7 @@ const Homepage = () => {
             }
         }
         fetchNews()
+
     },[])
     return (<div>
         
@@ -31,6 +35,7 @@ const Homepage = () => {
         <Card item={news} determ = {determiner}/>
         <Footer/>
     </div> );
+
 }
- 
+
 export default Homepage;

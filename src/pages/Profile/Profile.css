@@ -1,0 +1,40 @@
+.navDiv{
+    position:sticky;
+    top:0px;
+    z-index:500;
+}
+.imgDiv,img{
+    width:7rem;
+    height:6.5rem;
+    border-radius:100%;
+}
+
+.card{
+    flex-direction:column;
+    width:25rem!important;
+    border-radius:15px;
+    color:white;
+    background-color: rgb(73,139,249);
+    text-align:center;
+}
+form{
+    flex-direction:column;
+}
+input,section{
+    border:1px solid lightgrey;
+    background-color:white!important;
+    width:23rem;
+    height:2.5rem;
+    border-radius:5px;
+}
+.passwordInput{
+    border:none;
+    width:21rem;
+    height:2.2rem;
+}
+.passwordInput:focus{
+    outline:0px;
+}
+.fullname{
+    font-size:22px;
+}

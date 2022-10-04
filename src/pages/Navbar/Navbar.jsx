@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 const Navbar = () => {
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg bg-light">
+
+			<nav className="navbar navbar-expand-lg bg-light p-2 me-2">
 				<div className="container-fluid">
 					<a className="navbar-brand" href="#">
-						BONA
+						CRITIQUE
 					</a>
 					<button
 						className="navbar-toggler"
@@ -36,9 +38,13 @@ const Navbar = () => {
 								</a>
 							</li>
 						</ul>
-						<form className="d-flex w-50" role="search">
+
+						
+
+						<form className="d-flex" role="search">
 							<input
-								className="form-control me-2"
+								className="form-control me-2 input"
+
 								type="search"
 								placeholder="Type of search"
 								aria-label="Search"
@@ -47,6 +53,12 @@ const Navbar = () => {
 								Search
 							</button> */}
 						</form>
+						<Link>
+							<button className='btn btn-success'>Log In</button>
+						</Link>
+						<Link to='/profile'>
+							<button className='btn btn-primary ms-2'>Sign Up</button>
+						</Link>
 					</div>
 				</div>
 			</nav>
@@ -59,7 +71,7 @@ const Navbar = () => {
             </div>
             
             <div className='w-50'>
-               <input type="search" placeholder='Type of search' className='form-control w-100 rounded-0'/>
+            	<input type="search" placeholder='Type of search' className='form-control w-100 rounded-0'/>
             </div>
         </nav> */}
 		</>

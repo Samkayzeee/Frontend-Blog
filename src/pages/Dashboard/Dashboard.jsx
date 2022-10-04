@@ -7,6 +7,7 @@ import Footer from "../Homepage/Footer";
 import { Link,} from "react-router-dom";
 import Nav from "./DashboardNav/Nav";
 import http from "../Api";
+import Navbar_2 from "../Navbar/Navbar_2";
 
 function Dashboard() {
 	let toggler = true
@@ -41,7 +42,7 @@ function Dashboard() {
 
 	return (
 		<main>
-			<Nav>
+			<Navbar_2 />
 				<div className="background"></div>
 				<section>
 					<div className="containerr py-5 w-100 justify-content-center gap-5 d-flex flex-wrap">
@@ -113,7 +114,7 @@ function Dashboard() {
 					</div>
 				</section>
 				<Footer />
-			</Nav>
+			{/* </Nav> */}
 		</main>
 
 	);

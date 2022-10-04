@@ -7,6 +7,7 @@ import { useEffect } from "react"
 // import axios from "axios"
 import Nav from "../Dashboard/DashboardNav/Nav"
 import http from "../Api"
+import Navbar_2 from "../Navbar/Navbar_2"
 function View() {
     let toggler = true
     let { uid } = useParams()
@@ -44,7 +45,7 @@ function View() {
 
     return (
         <section>
-            <Nav>
+            <Navbar_2 />
 
                 <main className="pt-3 d-flex containers gap-3 pe-3">
                     <div className="commentsec">
@@ -109,7 +110,7 @@ function View() {
                     </div>
                 </main>
                 <Footer />
-            </Nav>
+            {/* </Nav>/ */}
         </section>
 
 
