@@ -3,13 +3,13 @@
     top:0px;
     z-index:500;
 }
-.imgDiv,img{
+.imgDiv img{
     width:7rem;
     height:6.5rem;
     border-radius:100%;
 }
 
-.card{
+.cards{
     flex-direction:column;
     width:25rem!important;
     border-radius:15px;
@@ -17,10 +17,10 @@
     background-color: rgb(73,139,249);
     text-align:center;
 }
-form{
+.editForm{
     flex-direction:column;
 }
-input,section{
+.input input{
     border:1px solid lightgrey;
     background-color:white!important;
     width:23rem;

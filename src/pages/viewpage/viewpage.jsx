@@ -4,8 +4,6 @@ import "./viewpage.css"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 import { useEffect } from "react"
-// import axios from "axios"
-import Nav from "../Dashboard/DashboardNav/Nav"
 import http from "../Api"
 import Navbar_2 from "../Navbar/Navbar_2"
 function View() {
@@ -73,7 +71,7 @@ function View() {
                                 <main key={index}>
                                     <div>
                                         <div >
-                                            <img width={"100%"} style={{ borderTopRightRadius: "7px", borderTopLeftRadius: "7px" }} src={value.urlToImage} alt="" />
+                                            <img width={"100%"} height={"350px"} style={{ borderTopRightRadius: "7px", borderTopLeftRadius: "7px" }} src={value.urlToImage} alt="" />
                                         </div>
                                     </div>
                                     <div className="px-5 mx-4">

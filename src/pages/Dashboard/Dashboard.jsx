@@ -1,11 +1,9 @@
-//  import Navbar from "./Navbar/Navbar";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import "./dashboard.css"
 import image1 from "../../assets/thirdimage.jpeg";
 import Footer from "../Homepage/Footer";
 import { Link,} from "react-router-dom";
-import Nav from "./DashboardNav/Nav";
+
 import http from "../Api";
 import Navbar_2 from "../Navbar/Navbar_2";
 
@@ -113,7 +111,7 @@ function Dashboard() {
 
 					</div>
 				</section>
-				<Footer />
+				{/* <Footer /> */}
 			{/* </Nav> */}
 		</main>
 

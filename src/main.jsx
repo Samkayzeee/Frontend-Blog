@@ -6,12 +6,13 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
-// import Contexts from "./Contexts/Contexts";
+import Contexts from "./Contexts/Contexts";
 // import Contexts_1 from "./Contexts/Contexts_1";
 import "./index.css";
 import Dashboard from "./pages/Dashboard/Dashboard";
 // import Dashboard from "./pages/Dashboard";
 import Homepage from "./pages/Homepage/Homepage";
+import Profile from "./pages/Profile/Profile";
 import View from "./pages/viewpage/viewpage";
 
 const router = createBrowserRouter([
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",element: <Dashboard />,
   },
+  { path: '/Profile', element: <Profile /> }
 ]);
 // const Homepage = React.lazy(() => import('./pages/Homepage/Homepage'))
 // const Profile = React.lazy(() => import('./pages/Profile/Profile'))
@@ -37,12 +39,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* <Contexts_1>
       <Contexts>
-        <Suspense> */}
+        <Suspense>
           <RouterProvider router={router} />
-        {/* </Suspense>
+        </Suspense>
       </Contexts>
-    </Contexts_1> */}
   </React.StrictMode>
 );

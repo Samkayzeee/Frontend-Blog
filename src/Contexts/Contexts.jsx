@@ -1,13 +1,14 @@
 import React, { createContext, useState } from 'react'
-const ProfileContexts_1 = createContext(null)
+const ProfileContexts = createContext(null)
 function Contexts({ children }) {
     const [newName, setNewName] = useState()
+    const [newEmail, setNewEmail] = useState()
     return (
-        <ProfileContexts_1.Provider value={{ newName, setNewName }}>
+        <ProfileContexts.Provider value={{ newName, setNewName, newEmail, setNewEmail }}>
             {children}
-        </ProfileContexts_1.Provider>
+        </ProfileContexts.Provider>
     )
 }
 
-export { ProfileContexts_1 }
+export { ProfileContexts}
 export default Contexts

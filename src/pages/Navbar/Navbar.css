@@ -39,4 +39,5 @@ input {
 	border:1px solid lightgrey!important;
 	outline:0px;
 	box-shadow:0 0 5px lightgrey!important;
+	width: 350px;
 }

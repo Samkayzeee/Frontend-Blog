@@ -5,9 +5,9 @@ const Navbar_2 = () => {
         <>
             <nav className="navbar navbar-expand-lg bg-light p-2 me-2">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <Link to={"/dashboard"} className="navbar-brand" href="#">
                         CRITIQUE
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -41,6 +41,9 @@ const Navbar_2 = () => {
 									Account
 								</a>
 							</li>
+                            <li className="nav-item ms-4">
+                                 <Link to='/Profile' className='nav-link'>Profile</Link>
+							</li>
                         </ul>
                         <form className="d-flex me-3" role="search">
                             <input
@@ -50,7 +53,7 @@ const Navbar_2 = () => {
                                 aria-label="Search"
                             />
                         </form>
-                        <Link to='/Profile' className='nav-link'><i>Profile</i></Link>
+                       
                         <Link>
                             <button className='btn btn-danger ms-3'>Log Out</button>
                         </Link>
